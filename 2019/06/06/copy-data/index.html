@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang>
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -96,7 +96,7 @@
 <meta property="og:url" content="http://tangjixing.com/2019/06/06/copy-data/index.html">
 <meta property="og:site_name" content="Jason的博客">
 <meta property="og:description" content="原文地址： lewis1990@amoy 基于promise用于浏览器和node.js的http客户端 特点 支持浏览器和node.js 支持promise 能拦截请求和响应 能转换请求和响应数据 能取消请求 自动转换JSON数据 浏览器端支持防止CSRF(跨站请求伪造)安装  npm安装 1$ npm install axios  bower安装 1$ bower install axios">
-<meta property="og:locale" content="default">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-06-06T17:52:11.700Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="axios中文文档">
@@ -116,7 +116,7 @@
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -148,7 +148,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -196,7 +196,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
-            Home
+            首页
           </a>
         </li>
       
@@ -206,7 +206,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
-            Categories
+            分类
           </a>
         </li>
       
@@ -219,7 +219,7 @@
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
-            Search
+            搜索
           </a>
         </li>
       
@@ -229,26 +229,20 @@
   
     <div class="site-search">
       
-  
-  <div class="algolia-popup popup search-popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
     <span class="popup-btn-close">
       <i class="fa fa-times-circle"></i>
     </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
   </div>
-
+  <div id="local-search-result"></div>
+</div>
 
 
 
@@ -308,9 +302,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-06T21:55:48+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-06T21:55:48+08:00">
                 2019-06-06
               </time>
             
@@ -329,7 +323,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">分类于</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -522,22 +516,6 @@ If your environment doesn’t support ES6 Promises, you can <a href="https://lin
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/06/06/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
-      
 
       
       
@@ -587,10 +565,10 @@ If your environment doesn’t support ES6 Promises, you can <a href="https://lin
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            站点概览
           </li>
         </ul>
       
@@ -610,8 +588,8 @@ If your environment doesn’t support ES6 Promises, you can <a href="https://lin
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
@@ -620,10 +598,10 @@ If your environment doesn’t support ES6 Promises, you can <a href="https://lin
               
               
               <div class="site-state-item site-state-categories">
-                
-                  <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">categories</span>
-                
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
               </div>
             
 
@@ -702,7 +680,7 @@ If your environment doesn’t support ES6 Promises, you can <a href="https://lin
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
@@ -710,7 +688,7 @@ If your environment doesn’t support ES6 Promises, you can <a href="https://lin
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
 
 
 
@@ -759,6 +737,9 @@ If your environment doesn’t support ES6 Promises, you can <a href="https://lin
 
 
 
+  
+  
+
 
 
 
@@ -795,6 +776,16 @@ If your environment doesn’t support ES6 Promises, you can <a href="https://lin
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
   
 
 
@@ -863,7 +854,7 @@ If your environment doesn’t support ES6 Promises, you can <a href="https://lin
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "";
+    var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {
@@ -1176,19 +1167,6 @@ If your environment doesn’t support ES6 Promises, you can <a href="https://lin
   </script>
 
 
-
-
-  
-  
-  
-  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
-
-  
-  
-  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
-  
-
-  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
 
 
 
